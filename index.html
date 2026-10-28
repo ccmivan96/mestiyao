@@ -233,6 +233,20 @@ footer .wrap{padding-block:22px;display:flex;justify-content:space-between;gap:1
   .photo::after{background:linear-gradient(180deg,rgba(4,38,92,.35) 0%,rgba(4,38,92,.85) 40%,rgba(4,38,92,.97) 100%)}
   .cn{letter-spacing:.18em}
 }
+/* shopee products */
+.items{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.item{display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;text-decoration:none;transition:transform .2s,border-color .2s}
+.item:hover{transform:translateY(-4px);border-color:var(--copper)}
+.item-img{position:relative;display:block;background:#fff;aspect-ratio:1}
+.item-img img{width:100%;height:100%;object-fit:cover;display:block}
+.item-img .off{position:absolute;top:8px;left:8px;background:var(--copper);color:#1a1200;font:800 12px var(--body);padding:3px 8px;border-radius:999px}
+.item-body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.item-name{font:600 14px/1.35 var(--body);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.7em}
+.item-price{font:800 26px/1 var(--display);color:var(--copper-hi);margin-top:auto}
+.item-sold{font:500 12px var(--mono);color:var(--muted)}
+@media (max-width:960px){.items{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:600px){.items{grid-template-columns:repeat(2,1fr);gap:12px}.item-price{font-size:22px}}
+@media (prefers-reduced-motion:reduce){.item{transition:none}}
 </style>
 </head>
 <body>
@@ -386,6 +400,101 @@ footer .wrap{padding-block:22px;display:flex;justify-content:space-between;gap:1
           <img src="img/poster.jpg" alt="Bossman CO2 MIG wire promotion poster, RM35 per roll" width="293" height="286" loading="lazy">
           <div><h3><span lang="zh">原装盒子</span><span lang="en">Original box</span></h3><p><span lang="zh">Bossman 原装盒，盒上注明 AWS ER70S-6。</span><span lang="en">Original Bossman box, marked AWS ER70S-6.</span></p></div>
         </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="products">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow"><span lang="zh">Shopee 热卖</span><span lang="en">Shopee best sellers</span></div>
+        <h2><span lang="zh">店里还有这些</span><span lang="en">More from our shelves</span></h2>
+        <p><span lang="zh">水喉、水泵、工具、门锁都有。价钱是 Shopee 店铺价，以店铺显示为准，点进去就可以下单。</span><span lang="en">Plumbing, pumps, tools and locks. Prices are our Shopee store prices and may change; tap a product to order.</span></p>
+      </div>
+      <div class="items">
+        <a class="item" href="https://shopee.com.my/product/39950297/47661008921" target="_blank" rel="noopener">
+          <span class="item-img"><img src="https://down-my.img.susercontent.com/file/my-11134207-820l9-mokjop2agpov50_tn" alt="PVC pipe fittings" width="300" height="300" loading="lazy" referrerpolicy="no-referrer"><b class="off">-60%</b></span>
+          <span class="item-body">
+            <span class="item-name"><span lang="zh">PVC 水管接头</span><span lang="en">PVC pipe fittings</span></span>
+            <span class="item-price">RM0.56</span>
+            <span class="item-sold"><span lang="zh">已售 10k+</span><span lang="en">10k+ sold</span> · ★4.9</span>
+          </span>
+        </a>
+        <a class="item" href="https://shopee.com.my/product/39950297/24988826458" target="_blank" rel="noopener">
+          <span class="item-img"><img src="https://down-my.img.susercontent.com/file/my-11134207-7rasi-m33b3o7nhzcx88_tn" alt="SIRIM HDPE poly pipe (per metre)" width="300" height="300" loading="lazy" referrerpolicy="no-referrer"><b class="off">-24%</b></span>
+          <span class="item-body">
+            <span class="item-name"><span lang="zh">SIRIM 黑色 Poly 水管（每米）</span><span lang="en">SIRIM HDPE poly pipe (per metre)</span></span>
+            <span class="item-price">RM1.97</span>
+            <span class="item-sold"><span lang="zh">已售 30k+</span><span lang="en">30k+ sold</span> · ★4.9</span>
+          </span>
+        </a>
+        <a class="item" href="https://shopee.com.my/product/39950297/4930715304" target="_blank" rel="noopener">
+          <span class="item-img"><img src="https://down-my.img.susercontent.com/file/my-11134207-7rask-m1ywjdiel81ee9_tn" alt="Heavy-duty poly ball valve 20/25/32mm" width="300" height="300" loading="lazy" referrerpolicy="no-referrer"><b class="off">-62%</b></span>
+          <span class="item-body">
+            <span class="item-name"><span lang="zh">重型 Poly 球阀 20/25/32mm</span><span lang="en">Heavy-duty poly ball valve 20/25/32mm</span></span>
+            <span class="item-price">RM4.17</span>
+            <span class="item-sold"><span lang="zh">已售 10k+</span><span lang="en">10k+ sold</span> · ★4.9</span>
+          </span>
+        </a>
+        <a class="item" href="https://shopee.com.my/product/39950297/5932234283" target="_blank" rel="noopener">
+          <span class="item-img"><img src="https://down-my.img.susercontent.com/file/9aa4e06d56713422615c523ca8ee3cde_tn" alt="Washing machine inlet hose 1.5–5M" width="300" height="300" loading="lazy" referrerpolicy="no-referrer"><b class="off">-47%</b></span>
+          <span class="item-body">
+            <span class="item-name"><span lang="zh">洗衣机进水管 1.5M–5M</span><span lang="en">Washing machine inlet hose 1.5–5M</span></span>
+            <span class="item-price">RM10.00</span>
+            <span class="item-sold"><span lang="zh">已售 6k+</span><span lang="en">6k+ sold</span> · ★4.9</span>
+          </span>
+        </a>
+        <a class="item" href="https://shopee.com.my/product/39950297/4932365597" target="_blank" rel="noopener">
+          <span class="item-img"><img src="https://down-my.img.susercontent.com/file/my-11134207-7rasg-m7rrm8deurnb98_tn" alt="Stainless steel sink strainer 2½&quot;" width="300" height="300" loading="lazy" referrerpolicy="no-referrer"><b class="off">-66%</b></span>
+          <span class="item-body">
+            <span class="item-name"><span lang="zh">不锈钢厨房水槽滤网 2½&quot;</span><span lang="en">Stainless steel sink strainer 2½&quot;</span></span>
+            <span class="item-price">RM3.43</span>
+            <span class="item-sold"><span lang="zh">已售 8k+</span><span lang="en">8k+ sold</span> · ★4.9</span>
+          </span>
+        </a>
+        <a class="item" href="https://shopee.com.my/product/39950297/27662542725" target="_blank" rel="noopener">
+          <span class="item-img"><img src="https://down-my.img.susercontent.com/file/my-11134207-7ras9-m3d63fwiaiyk89_tn" alt="Water pump pressure switch" width="300" height="300" loading="lazy" referrerpolicy="no-referrer"><b class="off">-51%</b></span>
+          <span class="item-body">
+            <span class="item-name"><span lang="zh">水泵自动压力开关</span><span lang="en">Water pump pressure switch</span></span>
+            <span class="item-price">RM11.76</span>
+            <span class="item-sold"><span lang="zh">已售 10k+</span><span lang="en">10k+ sold</span> · ★4.9</span>
+          </span>
+        </a>
+        <a class="item" href="https://shopee.com.my/product/39950297/3813062165" target="_blank" rel="noopener">
+          <span class="item-img"><img src="https://down-my.img.susercontent.com/file/abda71481d35a0c919ef607e248a2a4a_tn" alt="K2104 gas torch brazing kit" width="300" height="300" loading="lazy" referrerpolicy="no-referrer"><b class="off">-61%</b></span>
+          <span class="item-body">
+            <span class="item-name"><span lang="zh">K2104 喷火枪焊接套装</span><span lang="en">K2104 gas torch brazing kit</span></span>
+            <span class="item-price">RM9.46</span>
+            <span class="item-sold"><span lang="zh">已售 3k+</span><span lang="en">3k+ sold</span> · ★4.9</span>
+          </span>
+        </a>
+        <a class="item" href="https://shopee.com.my/product/39950297/5326355218" target="_blank" rel="noopener">
+          <span class="item-img"><img src="https://down-my.img.susercontent.com/file/9bc7a050498041f2b02d495fa4009ff2_tn" alt="8&quot; ratchet PVC pipe cutter" width="300" height="300" loading="lazy" referrerpolicy="no-referrer"><b class="off">-49%</b></span>
+          <span class="item-body">
+            <span class="item-name"><span lang="zh">8 寸棘轮 PVC 割管刀</span><span lang="en">8&quot; ratchet PVC pipe cutter</span></span>
+            <span class="item-price">RM17.35</span>
+            <span class="item-sold"><span lang="zh">已售 2k+</span><span lang="en">2k+ sold</span> · ★4.9</span>
+          </span>
+        </a>
+        <a class="item" href="https://shopee.com.my/product/39950297/7003696140" target="_blank" rel="noopener">
+          <span class="item-img"><img src="https://down-my.img.susercontent.com/file/8737ae5ebde32f4ebed0a74420eea905_tn" alt="LT cylindrical door knob lock" width="300" height="300" loading="lazy" referrerpolicy="no-referrer"><b class="off">-43%</b></span>
+          <span class="item-body">
+            <span class="item-name"><span lang="zh">LT 球形门锁</span><span lang="en">LT cylindrical door knob lock</span></span>
+            <span class="item-price">RM11.37</span>
+            <span class="item-sold"><span lang="zh">已售 9k+</span><span lang="en">9k+ sold</span> · ★4.9</span>
+          </span>
+        </a>
+        <a class="item" href="https://shopee.com.my/product/39950297/41764667928" target="_blank" rel="noopener">
+          <span class="item-img"><img src="https://down-my.img.susercontent.com/file/my-11134207-820l9-megi6panz7k28f_tn" alt="MT-370 370W self-priming water pump" width="300" height="300" loading="lazy" referrerpolicy="no-referrer"><b class="off">-57%</b></span>
+          <span class="item-body">
+            <span class="item-name"><span lang="zh">MT-370 370W 自吸水泵</span><span lang="en">MT-370 370W self-priming water pump</span></span>
+            <span class="item-price">RM145.77</span>
+            <span class="item-sold"><span lang="zh">已售 4k+</span><span lang="en">4k+ sold</span> · ★4.9</span>
+          </span>
+        </a>
+      </div>
+      <div class="ctas" style="justify-content:center;margin-top:28px">
+        <a class="btn btn-ghost" href="https://shopee.com.my/mestiyao26" target="_blank" rel="noopener"><span lang="zh">看全部 900+ 产品 ↗</span><span lang="en">See all 900+ products ↗</span></a>
       </div>
     </div>
   </section>
