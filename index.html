@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
 <title>Mestiyao Mall · Long Teik Hardware</title>
 <meta name="description" content="Long Teik Hardware Marketing（Mesti Yao）怡保五金店。Bossman CO2 MIG 焊丝 0.8mm × 5kg，RM35 一卷，怡保当天送。WhatsApp 012-526 2663 下单。">
 <meta property="og:title" content="Mesti Yao · Long Teik Hardware Marketing">
@@ -312,6 +313,46 @@ a.ft:hover .ft-cta{background:var(--wa);color:var(--wa-fg)}
 @media (max-width:760px){.ft-more{grid-column:auto}}
 @media (max-width:760px){.bento{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.ft-hero{grid-template-columns:1fr}.hero-img{padding:32px 24px 8px}.hero-body{padding:12px 20px 24px}.ft-body{padding:12px 12px 14px}.ft-name{font-size:14px}.ft-cta{font-size:12.5px;gap:6px;padding:9px 6px}.ft-cta svg{width:16px;height:16px}.more-n{font-size:52px}.ft-more{padding:16px}.ft-price{font-size:24px}.feat{margin-top:44px}}
 @media (prefers-reduced-motion:reduce){.ft,.ft-img img{transition:none}}
+/* product videos */
+.videos{overflow:hidden}
+.videos::before{content:"";position:absolute;right:-200px;top:80px;width:600px;height:600px;border-radius:50%;background:radial-gradient(closest-side,rgba(242,182,48,.18),transparent);pointer-events:none}
+.vgrid{display:grid;grid-template-columns:1fr;gap:32px;max-width:980px;margin:0 auto}
+.vcard{display:grid;grid-template-columns:280px minmax(0,1fr);gap:56px;align-items:center;background:linear-gradient(160deg,var(--panel-2),var(--panel));border:1px solid var(--line);border-radius:24px;padding:24px}
+.vphone{position:relative;justify-self:center;width:280px}
+.vcard.flip{grid-template-columns:minmax(0,1fr) 280px}.vcard.flip .vphone{order:2}
+.vcard{padding:36px 48px}
+.vphone-in{position:relative;aspect-ratio:9/16;border-radius:22px;overflow:hidden;background:#000;border:6px solid #0b1424;box-shadow:0 30px 60px rgba(0,0,0,.55);z-index:1}
+.vphone-in video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.vphone-glow{position:absolute;inset:-4px;border-radius:26px;background:conic-gradient(from var(--a,0deg),var(--copper-hi),#ff7a45,#2fa1ff,var(--copper-hi));filter:blur(10px);opacity:.75;animation:spin 6s linear infinite}
+@property --a{syntax:"<angle>";inherits:false;initial-value:0deg}
+@keyframes spin{to{--a:360deg}}
+.live{position:absolute;left:10px;top:10px;display:flex;align-items:center;gap:6px;font:700 11px var(--body);color:#fff;background:rgba(0,0,0,.55);padding:4px 9px;border-radius:999px;backdrop-filter:blur(4px)}
+.live i{width:7px;height:7px;border-radius:50%;background:#ff3b30;animation:blink 1.2s ease-in-out infinite}
+@keyframes blink{50%{opacity:.25}}
+.vbtn{position:absolute;bottom:16px;width:38px;height:38px;border-radius:50%;border:0;background:rgba(0,0,0,.55);color:#fff;display:grid;place-items:center;cursor:pointer;backdrop-filter:blur(4px)}
+.vbtn svg{width:18px;height:18px}
+.vplay{left:10px}.vmute{right:10px}
+.vplay .ic-play{display:none}.vplay.paused .ic-play{display:block}.vplay.paused .ic-pause{display:none}
+.vmute .ic-wave{display:none}.vmute.on .ic-wave{display:block}.vmute.on .ic-x{display:none}
+.vprog{position:absolute;left:0;right:0;bottom:0;height:4px;background:rgba(255,255,255,.2)}
+.vprog i{display:block;height:100%;width:0;background:var(--copper-hi)}
+.float-price{position:absolute;z-index:2;right:-18px;top:22%;background:var(--copper);color:#1a1200;font:800 22px/1 var(--display);padding:10px 14px;border-radius:14px;box-shadow:0 14px 30px rgba(0,0,0,.45);animation:bob 3.2s ease-in-out infinite;transform:rotate(4deg)}
+.float-price small{font:700 12px var(--body);margin-left:2px}
+.float-price b{display:block;font:800 11px var(--body);color:#fff;background:#e8412b;border-radius:999px;padding:2px 6px;margin-top:6px;text-align:center}
+@keyframes bob{50%{transform:translateY(-10px) rotate(4deg)}}
+.vtext{display:flex;flex-direction:column;gap:14px;min-width:0}
+.vtext h3{font-size:clamp(28px,3vw,40px);font-weight:800;text-transform:uppercase}
+.vtext p{color:#c3ccd4}
+.vmeta{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.vprice{font:800 40px/1 var(--display)}
+.vprice small{font:700 15px var(--body);color:var(--copper-hi)}
+.vprice em{font:500 14px var(--body);color:var(--muted);font-style:normal}
+.vtext .btn{align-self:flex-start}
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.vcard.reveal:nth-child(2){transition-delay:.15s}
+@media (max-width:700px){.vcard,.vcard.flip{grid-template-columns:1fr;padding:24px 20px;gap:28px}.vcard.flip .vphone{order:0}.vphone{width:min(240px,70vw)}.float-price{right:-12px}.vtext .btn{align-self:stretch}}
+@media (prefers-reduced-motion:reduce){.vphone-glow,.live i,.float-price{animation:none}.reveal{opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body>
@@ -551,6 +592,60 @@ a.ft:hover .ft-cta{background:var(--wa);color:var(--wa-fg)}
     </div>
   </section>
 
+  <section class="band videos" id="videos">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow"><span lang="zh">产品视频</span><span lang="en">Product videos</span><span lang="ms">Video produk</span></div>
+        <h2><span lang="zh">看清楚怎么用，再下单</span><span lang="en">See it work, then order</span><span lang="ms">Tengok cara guna, baru pesan</span></h2>
+        <p><span lang="zh">实物拍摄，不是图片。往下滑视频会自动播放，点喇叭可以开声音。</span><span lang="en">Real footage of the actual product. Videos play as you scroll; tap the speaker for sound.</span><span lang="ms">Rakaman produk sebenar. Video main sendiri bila skrol; tekan ikon pembesar suara untuk bunyi.</span></p>
+      </div>
+      <div class="vgrid">
+        <article class="vcard reveal">
+          <div class="vphone">
+            <div class="vphone-glow" aria-hidden="true"></div>
+            <div class="vphone-in">
+              <video class="pv" muted loop playsinline preload="none" poster="https://down-my.img.susercontent.com/file/abda71481d35a0c919ef607e248a2a4a" data-src="https://cvf.shopee.com.my/file/5abbb92610dcabf5e3adef32fcd18342"></video>
+              <span class="live"><i></i><span lang="zh">实拍</span><span lang="en">Real footage</span><span lang="ms">Rakaman sebenar</span></span>
+              <button type="button" class="vbtn vplay" aria-label="Play / pause"><svg viewBox="0 0 24 24" fill="currentColor"><path class="ic-pause" d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/><path class="ic-play" d="M8 5v14l11-7z"/></svg></button>
+              <button type="button" class="vbtn vmute" aria-label="Sound on / off"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 9v6h4l5 4V5L8 9z"/><path class="ic-wave" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path class="ic-x" d="M16 9l5 6M21 9l-5 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+              <div class="vprog"><i></i></div>
+            </div>
+            <div class="float-price">RM4.60<small><span lang="zh">起</span><span lang="en">+</span><span lang="ms">+</span></small><b>-60%</b></div>
+          </div>
+          <div class="vtext">
+            <div class="eyebrow"><span lang="zh">焊接 · 钎焊</span><span lang="en">Welding · brazing</span><span lang="ms">Kimpalan · pateri</span></div>
+            <h3><span lang="zh">K2104 喷火枪套装</span><span lang="en">K2104 gas torch kit</span><span lang="ms">Set obor gas K2104</span></h3>
+            <p><span lang="zh">接上丁烷气罐就能用，一按点火，火焰可调。附焊条和助焊剂，铜管、小件焊接都适合。</span><span lang="en">Screws onto a butane can, push-button ignition, adjustable flame. Comes with rods and flux for copper pipe and small brazing jobs.</span><span lang="ms">Pasang pada tin gas butana, nyalaan tekan butang, api boleh laras. Disertakan rod dan fluks untuk paip tembaga dan kerja pateri kecil.</span></p>
+            <div class="chips"><span>Push ignition</span><span>Rods + flux</span><span>Butane</span></div>
+            <div class="vmeta"><span class="vprice">RM4.60<small><span lang="zh"> 起</span><span lang="en"> +</span><span lang="ms"> +</span></small> <em>/ <span lang="zh">套</span><span lang="en">set</span><span lang="ms">set</span></em></span><span class="ft-sold">🔥 <span lang="zh">已售 3.5k</span><span lang="en">3.5k sold</span><span lang="ms">3.5k terjual</span></span></div>
+            <a class="btn btn-wa js-vid" href="https://wa.me/60125262663" target="_blank" rel="noopener" data-zh="你好，我看了 K2104 喷火枪的视频，想问价钱和有没有货。" data-en="Hi, I watched the K2104 gas torch video. Is it in stock?" data-ms="Hai, saya tengok video obor gas K2104. Ada stok?"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3Z"/></svg><span lang="zh">WhatsApp 问货</span><span lang="en">Ask on WhatsApp</span><span lang="ms">Tanya di WhatsApp</span></a>
+          </div>
+        </article>
+        <article class="vcard reveal flip">
+          <div class="vphone">
+            <div class="vphone-glow" aria-hidden="true"></div>
+            <div class="vphone-in">
+              <video class="pv" muted loop playsinline preload="none" poster="https://down-my.img.susercontent.com/file/my-11134207-820li-muqbrjr8oydmb7" data-src="https://cvf.shopee.com.my/file/api/v4/11110105/mms/my-11110105-6v8gs-muue61kqefiac6.16000041793175349.mp4"></video>
+              <span class="live"><i></i><span lang="zh">实拍</span><span lang="en">Real footage</span><span lang="ms">Rakaman sebenar</span></span>
+              <button type="button" class="vbtn vplay" aria-label="Play / pause"><svg viewBox="0 0 24 24" fill="currentColor"><path class="ic-pause" d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/><path class="ic-play" d="M8 5v14l11-7z"/></svg></button>
+              <button type="button" class="vbtn vmute" aria-label="Sound on / off"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 9v6h4l5 4V5L8 9z"/><path class="ic-wave" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path class="ic-x" d="M16 9l5 6M21 9l-5 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+              <div class="vprog"><i></i></div>
+            </div>
+            <div class="float-price">RM72.88<b>-18%</b></div>
+          </div>
+          <div class="vtext">
+            <div class="eyebrow"><span lang="zh">门锁 · 大门</span><span lang="en">Locks · main door</span><span lang="ms">Kunci · pintu utama</span></div>
+            <h3><span lang="zh">JTC 1188AC 大门把手锁</span><span lang="en">JTC 1188AC entrance handle lock</span><span lang="ms">Kunci pemegang pintu JTC 1188AC</span></h3>
+            <p><span lang="zh">重型古铜色大门把手锁，Backset 60 / 70mm，门厚 30–50mm，左右门都能装。</span><span lang="en">Heavy-duty antique-copper entrance lockset. Backset 60 / 70mm, fits 30–50mm doors, left or right hand.</span><span lang="ms">Set kunci pintu utama tugas berat warna tembaga antik. Backset 60 / 70mm, pintu 30–50mm, kiri atau kanan.</span></p>
+            <div class="chips"><span>Backset 60/70mm</span><span>Door 30–50mm</span><span>L / R</span></div>
+            <div class="vmeta"><span class="vprice">RM72.88 <em>/ <span lang="zh">套</span><span lang="en">set</span><span lang="ms">set</span></em></span><span class="ft-sold">🔥 <span lang="zh">已售 4.4k</span><span lang="en">4.4k sold</span><span lang="ms">4.4k terjual</span></span></div>
+            <a class="btn btn-wa js-vid" href="https://wa.me/60125262663" target="_blank" rel="noopener" data-zh="你好，我看了 JTC 1188AC 大门锁的视频，想问还有没有货。" data-en="Hi, I watched the JTC 1188AC lock video. Is it in stock?" data-ms="Hai, saya tengok video kunci JTC 1188AC. Ada stok?"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3Z"/></svg><span lang="zh">WhatsApp 问货</span><span lang="en">Ask on WhatsApp</span><span lang="ms">Tanya di WhatsApp</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section class="band" id="products">
     <div class="wrap">
       <div class="sec-head">
@@ -686,6 +781,7 @@ var PRODUCTS = [["(1PCS) SLEEVE ANCHOR/WALL PLUG BESI","(1PCS) SLEEVE ANCHOR/WAL
     document.getElementById("perks").innerHTML = perks(q);
     var href = "https://wa.me/" + PHONE + "?text=" + encodeURIComponent(message());
     document.querySelectorAll(".js-wa").forEach(function(a){ a.href = href; });
+    document.querySelectorAll(".js-vid").forEach(function(a){ a.href = "https://wa.me/" + PHONE + "?text=" + encodeURIComponent(a.getAttribute("data-" + lang)); });
     document.querySelectorAll(".js-feat").forEach(function(a){ a.href = "https://wa.me/" + PHONE + "?text=" + encodeURIComponent(a.getAttribute("data-" + lang)); });
     render();
     var ask = lang === "en" ? "Hi, I'd like to ask about a product." : lang === "ms" ? "Hai, saya nak tanya tentang produk." : "你好，我想问产品。";
@@ -709,6 +805,33 @@ var PRODUCTS = [["(1PCS) SLEEVE ANCHOR/WALL PLUG BESI","(1PCS) SLEEVE ANCHOR/WAL
     try { navigator.clipboard.writeText("0125262663").then(done, fallback); } catch(e){ fallback(); }
   });
   setLang(lang === "en" || lang === "ms" ? lang : "zh");
+
+
+  // product videos: lazy-load, autoplay in view, controls
+  (function(){
+    var vids = [].slice.call(document.querySelectorAll(".pv"));
+    var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    vids.forEach(function(v){
+      var card = v.closest(".vphone-in"), pb = card.querySelector(".vplay"), mb = card.querySelector(".vmute"), bar = card.querySelector(".vprog i");
+      v.addEventListener("timeupdate", function(){ if (v.duration) bar.style.width = (v.currentTime / v.duration * 100) + "%"; });
+      v.addEventListener("play", function(){ pb.classList.remove("paused"); });
+      v.addEventListener("pause", function(){ pb.classList.add("paused"); });
+      pb.addEventListener("click", function(){ v.manual = true; if (!v.src) v.src = v.dataset.src; v.paused ? v.play() : v.pause(); });
+      mb.addEventListener("click", function(){ v.muted = !v.muted; mb.classList.toggle("on", !v.muted); if (v.paused) v.play(); });
+      pb.classList.add("paused");
+    });
+    if (!("IntersectionObserver" in window)) { vids.forEach(function(v){ v.src = v.dataset.src; v.controls = true; }); document.querySelectorAll(".reveal").forEach(function(e){ e.classList.add("in"); }); return; }
+    var vo = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        var v = e.target;
+        if (e.isIntersecting) { if (!v.src) v.src = v.dataset.src; if (!reduce && !v.manual) { var p = v.play(); if (p && p.catch) p.catch(function(){}); } }
+        else if (!v.paused) v.pause();
+      });
+    }, {threshold: .45});
+    vids.forEach(function(v){ vo.observe(v); });
+    var ro = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add("in"); ro.unobserve(e.target); } }); }, {threshold: .15});
+    document.querySelectorAll(".reveal").forEach(function(e){ ro.observe(e); });
+  })();
 
   // welding sparks behind the signboard
   var cv = document.getElementById("sparks"), ctx = cv.getContext("2d");
